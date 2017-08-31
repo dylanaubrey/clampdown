@@ -7,10 +7,10 @@ module.exports = (config) => {
     ],
     preprocessors: {
       'src/**/*': ['babel', 'coverage'],
-      'test/specs/**/*': ['webpack'],
+      'test/specs/**/*': ['webpack', 'sourcemap'],
     },
     webpack: {
-      devtool: 'cheap-module-source-map',
+      devtool: 'inline-source-map',
       module: {
         rules: [{
           test: /\.js$/,
